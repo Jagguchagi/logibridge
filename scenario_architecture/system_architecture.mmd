@@ -1,0 +1,11 @@
+flowchart LR
+  subgraph Truck["Truck edge node (keeps working with no cellular coverage)"]
+    S["Sensors (simulated)<br/>temperature 1 Hz, vibration RMS 0.5 Hz, door events"] -->|publish| B["Local MQTT broker<br/>Mosquitto :1883"]
+    B -->|subscribe| P["Preprocessing<br/>5-sample moving average, 30 s window / 10 s step,<br/>6 features, frozen stats saturated at +/-10 sigma"]
+    P --> I["Inference service (Docker)<br/>TFLite M1/M2/M3 via MODEL_PATH<br/>+ SEPARATE temperature safety rule"]
+    I -->|inference topic| M["PSI drift monitor<br/>last 100 inferences, every 60 s, P(Normal) default"]
+    I --> L["Local alert log<br/>[LOCAL ALERT] lines"]
+    I --> O["Durable outbox<br/>SQLite, one UUID per alert"]
+  end
+  O -- "POST when uplink is up" --> K["Operations backend<br/>demo HTTP :8080, stores each UUID once"]
+  K -. "ACK (UUID)" .-> O
