@@ -1,0 +1,35 @@
+{
+  "psi": {
+    "run_id": "rehearse01",
+    "selected_score": "normal_probability",
+    "injected_at": 1793045131.5264754,
+    "restored_at": 1793045135.6340513,
+    "model_sha256": "4689b8f4e7b910b14facbf90493c6ea66aeccb58c5ee75f2be86f9450a0f229e",
+    "stats_sha256": "3c530d6fd697fc2400df5b707c9d835e7479a72f12b85b307ac0952e6f86a7f1",
+    "pipeline_sha256": "d11e334db038c9b7a72c159c7eb5819778e1a0a00da0f3e4aaf9f189a46465b2",
+    "scores": {
+      "normal_probability": {
+        "baseline_psi": 0.007090139241932807,
+        "recent_clean_baseline": true,
+        "crossing_delay_s": 0.8,
+        "crossing_within_5_min": true,
+        "peak_psi": 1.0063423949621113,
+        "drift_present_at_restore": true,
+        "recovery_delay_s": 3.7,
+        "recovered_below_0_10": true
+      },
+      "max_probability": {
+        "baseline_psi": 0.007090139241932807,
+        "recent_clean_baseline": true,
+        "crossing_delay_s": null,
+        "crossing_within_5_min": false,
+        "peak_psi": 0.007090139241932807,
+        "drift_present_at_restore": false,
+        "recovery_delay_s": 0.7,
+        "recovered_below_0_10": true
+      }
+    },
+    "interval_ok": false,
+    "e1_pass": false
+  }
+}

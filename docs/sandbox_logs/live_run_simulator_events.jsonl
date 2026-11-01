@@ -1,0 +1,3 @@
+{"event": "mode_change", "mode": "none", "source": "start", "epoch": 1793044932.9454124, "run_id": "e2e01", "truck_id": "T001", "synthetic": true}
+{"event": "mode_change", "mode": "combined", "source": "control", "epoch": 1793044983.9446132, "run_id": "e2e01", "truck_id": "T001", "synthetic": true}
+{"event": "mode_change", "mode": "none", "source": "control", "epoch": 1793045063.9446046, "run_id": "e2e01", "truck_id": "T001", "synthetic": true}

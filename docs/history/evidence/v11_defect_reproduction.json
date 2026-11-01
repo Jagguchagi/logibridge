@@ -1,0 +1,13 @@
+{
+  "nonfinite_input_became_finite": true,
+  "output": [
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0
+  ],
+  "shifted_example_before": 10.0,
+  "shifted_example_after": 8.0
+}

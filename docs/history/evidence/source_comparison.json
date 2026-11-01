@@ -1,0 +1,22 @@
+{
+  "v6_text_files": 79,
+  "v7_text_files": 83,
+  "added": [
+    "docs/JOINT_REVIEW_V7.md",
+    "scripts/build_tracker.py",
+    "scripts/verify_bridge.py",
+    "tests/test_v7_regressions.py"
+  ],
+  "removed": [],
+  "changed": [
+    "README.md",
+    "docs/RUNBOOK.md",
+    "evidence/local_tests.txt",
+    "evidence/validation_status.json",
+    "scripts/analyse_run.py",
+    "scripts/make_snapshot.py",
+    "submission/evidence_gate.py",
+    "tests/test_models_and_monitoring.py",
+    "tests/test_v6_regressions.py"
+  ]
+}

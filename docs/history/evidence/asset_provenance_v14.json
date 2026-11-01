@@ -1,0 +1,12 @@
+{
+  "original_zip_available": false,
+  "original_assignment_docx_available": false,
+  "numpy_assets": "Match V13 hashes",
+  "workbook": "Regenerated from inherited source",
+  "architecture_png": {
+    "source": "New generated conceptual visual; source-faithful .mmd retained",
+    "sha256": "e36c82987e71bf148059f51c2e8c9f99581b39b75b5278325673a06748679537",
+    "matches_v13": false,
+    "requires_report_review": true
+  }
+}

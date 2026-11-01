@@ -1,0 +1,96 @@
+{
+  "pipeline_sha256": "d11e334db038c9b7a72c159c7eb5819778e1a0a00da0f3e4aaf9f189a46465b2",
+  "features": [
+    "temperature_mean",
+    "temperature_std",
+    "temperature_roc",
+    "vibration_rms",
+    "vibration_peak",
+    "vibration_kurtosis"
+  ],
+  "train_min": [
+    3.8452091217041016,
+    0.06430249661207199,
+    -0.7903124690055847,
+    0.4208906292915344,
+    0.44099223613739014,
+    1.3751952648162842
+  ],
+  "train_max": [
+    56.168792724609375,
+    0.8485588431358337,
+    5.82413911819458,
+    1.30611252784729,
+    1.367781639099121,
+    4.709947109222412
+  ],
+  "val_min": [
+    3.886472702026367,
+    0.06970606744289398,
+    -0.8001965284347534,
+    0.432620108127594,
+    0.44782933592796326,
+    1.5290919542312622
+  ],
+  "val_max": [
+    73.80191040039062,
+    0.7981593012809753,
+    5.489868640899658,
+    1.2991652488708496,
+    1.383390188217163,
+    4.855070114135742
+  ],
+  "variants": {
+    "M1": {
+      "clipped_windows": 0,
+      "clipped_per_feature": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "disagreements_with_M1": 0,
+      "vibration_only_prediction_counts": [
+        87,
+        0,
+        0
+      ]
+    },
+    "M2": {
+      "clipped_windows": 0,
+      "clipped_per_feature": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "disagreements_with_M1": 0,
+      "vibration_only_prediction_counts": [
+        87,
+        0,
+        0
+      ]
+    },
+    "M3": {
+      "clipped_windows": 0,
+      "clipped_per_feature": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "disagreements_with_M1": 0,
+      "vibration_only_prediction_counts": [
+        87,
+        0,
+        0
+      ]
+    }
+  }
+}

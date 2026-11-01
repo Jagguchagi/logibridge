@@ -1,0 +1,11 @@
+# Final submission checklist
+- [ ] Accuracy > 88% (training_metrics.json) and chosen model Critical recall > 95% (benchmark_results.csv)
+- [ ] container_smoke.txt passes; OTA cache logs and ota_savings.json saved
+- [ ] Ansible run 2 changed=0 (ansible_check.json); model-update run shown
+- [ ] PSI crossing within 5 min and recovery < 0.10 (analysis.json); SLA <= 90 s
+- [ ] Interpretations confirmed with the instructor (docs/DISCLOSURES.md)
+- [ ] Phase 1, phase 2 and final reports written by you, in reports/; final named <your group no>_LogiEdge_Final.pdf (the checker looks for this name)
+- [ ] Your own 15-20 min video; link in demo/demo_video_link.txt and the report; works in incognito
+- [ ] Private repo; instructor collaborator accepted
+- [ ] `python -m submission.verify_submission --run-id <run>` exits 0
+- [ ] LMS: exactly three items (repo URL, video link, report PDF), before the deadline

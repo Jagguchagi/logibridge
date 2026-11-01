@@ -1,0 +1,39 @@
+{
+  "changed": [
+    "README.md",
+    "data_pipeline/preprocessing.py",
+    "deployment/logibridge_deploy.yml",
+    "docs/DISCLOSURES.md",
+    "docs/NEXT_STEPS.md",
+    "docs/RUNBOOK.md",
+    "evidence/local_tests.txt",
+    "evidence/validation_status.json",
+    "inference/Dockerfile",
+    "inference/inference_service.py",
+    "monitoring/drift_monitor.py",
+    "optimisation/benchmark.py",
+    "optimisation/range_check.py",
+    "scripts/analyse_run.py",
+    "scripts/container_smoke.sh",
+    "scripts/dry_run_e1.py",
+    "scripts/make_snapshot.py",
+    "scripts/ota_cache_demo.py",
+    "scripts/select_model.py",
+    "submission/evidence_gate.py",
+    "submission/verify_submission.py",
+    "tests/test_packaging.py",
+    "tests/test_v11_regressions.py",
+    "training/convert_ptq.py",
+    "training/prune_quantise.py",
+    "training/train_model.py"
+  ],
+  "added": [
+    "docs/JOINT_REVIEW_V12.md",
+    "docs/START_HERE_V12.md",
+    "evidence/standin_audit_v12.json",
+    "evidence/v11_defect_reproduction.json",
+    "scripts/quality_check.py",
+    "tests/test_v12_regressions.py"
+  ],
+  "removed_original_text_files": []
+}

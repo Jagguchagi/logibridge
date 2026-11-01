@@ -1,0 +1,29 @@
+{
+ "held_while_backend_down": 5,
+ "synced_after_restart": 5,
+ "stored_by_backend": 5,
+ "ids_equal": true,
+ "live_run": {
+  "fault_to_first_alert_s": 19.0,
+  "sla_s": 90,
+  "alerts_before_injection": 0,
+  "alerts": 9,
+  "inference_classes_over_time": [
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0
+  ]
+ }
+}

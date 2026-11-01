@@ -1,0 +1,9 @@
+[LOCAL ALERT] {"timestamp": 1793045002.9444423, "emitted_at": 1793045002.9476404, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6
+[LOCAL ALERT] {"timestamp": 1793045012.9444423, "emitted_at": 1793045012.9475992, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6
+[LOCAL ALERT] {"timestamp": 1793045022.9444423, "emitted_at": 1793045022.9476688, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6
+[LOCAL ALERT] {"timestamp": 1793045032.9444423, "emitted_at": 1793045032.9507966, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6
+[LOCAL ALERT] {"timestamp": 1793045042.9444423, "emitted_at": 1793045042.948767, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6e
+[LOCAL ALERT] {"timestamp": 1793045052.9444423, "emitted_at": 1793045052.948292, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6e
+[LOCAL ALERT] {"timestamp": 1793045062.9444423, "emitted_at": 1793045062.9469643, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6
+[LOCAL ALERT] {"timestamp": 1793045072.9444423, "emitted_at": 1793045072.946939, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6e
+[LOCAL ALERT] {"timestamp": 1793045082.9444423, "emitted_at": 1793045082.94705, "run_id": "e2e01", "truck_id": "T001", "model_version": "4689b8f4e7b9", "model_sha256": "4689b8f4e7b910b14facbf90493c6ea

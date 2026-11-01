@@ -1,0 +1,46 @@
+{
+  "method_used": "custom",
+  "target_sparsity": 0.35,
+  "end_step": 279,
+  "zero_columns": [
+    11,
+    6
+  ],
+  "expected_zero_columns": [
+    11,
+    6
+  ],
+  "compact_widths": [
+    21,
+    10
+  ],
+  "removed_fraction_per_layer": [
+    0.34375,
+    0.375
+  ],
+  "removed_units": [
+    [
+      0,
+      1,
+      6,
+      7,
+      9,
+      13,
+      14,
+      24,
+      26,
+      27,
+      28
+    ],
+    [
+      2,
+      6,
+      11,
+      13,
+      14,
+      15
+    ]
+  ],
+  "pre_finetune_max_abs_difference": 0.0,
+  "note": "Whole Dense neurons, not convolution filters. Report actual fractions, not exactly 35%."
+}

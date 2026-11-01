@@ -1,0 +1,11 @@
+{
+  "release": "V15 (Claude)",
+  "baseline": "GPT V14: 117 blocks and 5 embedded binaries verified; 103 tests passed before changes",
+  "local_tests": "112 passed in 6.20s",
+  "real_runs": "Run on the FINAL V15 tree: TensorFlow 2.21 (tf-keras legacy), tfmot 0.8.1, amqtt broker. See docs/SANDBOX_VERIFICATION.md and docs/sandbox_logs/. Not the pinned versions.",
+  "key_finding": "tfmot block pruning crashes (rank 2); default pruning is now custom whole-neuron masks, run for real twice: zero columns [11, 6], widths [21, 10]",
+  "known_gap": "vibration-only fault classified Normal (87/87), disclosed",
+  "docker_mosquitto_ansible_pi_pins": "NOT RUN",
+  "trained_models_included": false,
+  "reports_video_repo_LMS": "NOT COMPLETE"
+}

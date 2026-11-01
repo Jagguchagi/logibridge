@@ -1,0 +1,76 @@
+---
+# E2: exactly seven tasks, in the brief's order. Unchanged rerun: tasks 2-3 ok, task 4 skipped,
+# task 6 finds the container already matching -> PLAY RECAP changed=0.
+# Override per run, e.g.  -e run_id=demo02 -e image_name=localhost:5000/logibridge:v2
+- name: Deploy LogiBridge inference service
+  hosts: trucks
+  become: true
+  gather_facts: false
+  vars:
+    image_name: "localhost:5000/logibridge:v1"   # use a NEW tag for every new image
+    truck_id: "T001"
+    run_id: ""                                    # empty = service latches the first run it sees
+    backend_url: "http://localhost:8080/alerts"
+  tasks:
+    - name: 1 Create /opt/logibridge (and the alert-state directory) if not present
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0755"
+      loop: [/opt/logibridge, /var/lib/logibridge]
+
+    - name: 2 Copy new model file to /opt/logibridge/model.tflite (with its frozen stats)
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../{{ item.src }}"
+        dest: "{{ item.dest }}"
+        mode: "0644"
+      loop:
+        - {src: inference/model.tflite.pipeline.json, dest: /opt/logibridge/model.tflite.pipeline.json}
+        - {src: inference/model.tflite, dest: /opt/logibridge/model.tflite}
+        - {src: data_pipeline/training_stats.npy, dest: /opt/logibridge/training_stats.npy}
+      register: model_copy
+
+    - name: 3 Copy updated reference_dist.json
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../monitoring/reference_dist.json"
+        dest: /opt/logibridge/reference_dist.json
+        mode: "0644"
+      register: reference_copy
+
+    # Stops only when a loaded file changed so task 6 reloads it and an unchanged rerun stays changed=0.
+    - name: 4 Stop the running inference container if running and its files changed
+      ansible.builtin.command: docker stop logibridge
+      when: model_copy.changed or reference_copy.changed
+      register: stop_result
+      changed_when: stop_result.rc == 0
+      failed_when: stop_result.rc != 0 and 'no such container' not in (stop_result.stderr | lower)
+
+    - name: 5 Pull updated container image from the local Docker registry
+      community.docker.docker_image:
+        name: "{{ image_name }}"
+        source: pull
+
+    - name: 6 Start inference container with environment variables
+      community.docker.docker_container:
+        name: logibridge
+        image: "{{ image_name }}"
+        state: started
+        restart_policy: unless-stopped
+        network_mode: host
+        env:
+          MODEL_PATH: /opt/logibridge/model.tflite
+          STATS_PATH: /opt/logibridge/training_stats.npy
+          TRUCK_ID: "{{ truck_id | string }}"
+          RUN_ID: "{{ run_id | string }}"
+          MQTT_HOST: localhost
+          STATE_DIR: /state
+          BACKEND_URL: "{{ backend_url }}"
+        volumes:
+          - /opt/logibridge:/opt/logibridge:ro
+          - /var/lib/logibridge:/state
+
+    - name: 7 Wait 15 seconds and verify the container is running
+      ansible.builtin.shell: |
+        sleep 15
+        docker ps --quiet --filter "name=^logibridge$" --filter status=running | grep -q .
+      changed_when: false

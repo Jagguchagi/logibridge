@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "windows_per_class": [
+    117,
+    87,
+    87
+  ],
+  "train": 219,
+  "validation": 60,
+  "purged_per_class": 4,
+  "label_note": "Brief mode labels kept. temp_drift exceeds +3 C after ~38 s, so its later windows are physically Critical; the runtime safety rule handles that separately."
+}

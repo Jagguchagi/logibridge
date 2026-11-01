@@ -1,0 +1,103 @@
+{
+  "status": "EXPERIMENTAL_STANDIN_NOT_ASSIGNMENT_EVIDENCE",
+  "engine": "scikit-learn MLPClassifier; not TensorFlow or TFLite",
+  "features": [
+    "temperature_mean",
+    "temperature_std",
+    "temperature_roc",
+    "vibration_rms",
+    "vibration_peak",
+    "vibration_kurtosis"
+  ],
+  "validation_max_absolute_unclipped_z": [
+    1669.9422607421875,
+    26.361797332763672,
+    18.73287010192871,
+    61.32172775268555,
+    56.22764205932617,
+    3.2219576835632324
+  ],
+  "results": [
+    {
+      "clip_z": null,
+      "seed": 42,
+      "validation_accuracy": 0.9166666666666666,
+      "critical_recall": 0.7222222222222222,
+      "shifted_stats_accuracy": 0.8,
+      "validation_rows_with_changed_features_under_shift": 60
+    },
+    {
+      "clip_z": null,
+      "seed": 2,
+      "validation_accuracy": 0.9333333333333333,
+      "critical_recall": 0.7777777777777778,
+      "shifted_stats_accuracy": 0.8166666666666667,
+      "validation_rows_with_changed_features_under_shift": 60
+    },
+    {
+      "clip_z": 10.0,
+      "seed": 42,
+      "validation_accuracy": 1.0,
+      "critical_recall": 1.0,
+      "shifted_stats_accuracy": 1.0,
+      "validation_rows_with_changed_features_under_shift": 60
+    },
+    {
+      "clip_z": 10.0,
+      "seed": 2,
+      "validation_accuracy": 1.0,
+      "critical_recall": 1.0,
+      "shifted_stats_accuracy": 1.0,
+      "validation_rows_with_changed_features_under_shift": 60
+    }
+  ],
+  "dry_runs": [
+    {
+      "WARNING": "scikit-learn stand-in with simulated time; NOT TFLite, NOT live MQTT, NOT assignment evidence",
+      "standin_val_accuracy": 1.0,
+      "standin_critical_recall": 1.0,
+      "inject_s": 150,
+      "e1_pass_in_dry_run": true,
+      "scores": {
+        "normal_probability": {
+          "baseline_psi": 0.010667024020998556,
+          "crossing_delay_s": 120.0,
+          "peak_psi": 0.43771052605348093,
+          "recovery_delay_s": 990.0
+        },
+        "max_probability": {
+          "baseline_psi": 0.010667024020998556,
+          "crossing_delay_s": null,
+          "peak_psi": 0.010667024020998556,
+          "recovery_delay_s": 30.0
+        }
+      }
+    },
+    {
+      "WARNING": "scikit-learn stand-in with simulated time; NOT TFLite, NOT live MQTT, NOT assignment evidence",
+      "standin_val_accuracy": 1.0,
+      "standin_critical_recall": 1.0,
+      "inject_s": 300,
+      "e1_pass_in_dry_run": true,
+      "scores": {
+        "normal_probability": {
+          "baseline_psi": 0.010667024020998556,
+          "crossing_delay_s": 120.0,
+          "peak_psi": 1.1360019537749924,
+          "recovery_delay_s": 1020.0
+        },
+        "max_probability": {
+          "baseline_psi": 0.010667024020998556,
+          "crossing_delay_s": null,
+          "peak_psi": 0.010667024020998556,
+          "recovery_delay_s": 0.0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Same supplied synthetic validation split; clipping was proposed after inspecting it, so this is not an untouched test set.",
+    "Only two seeds measured here; no generalization or real hardware guarantee.",
+    "No TensorFlow training, quantization, MQTT, Docker, Ansible or hardware execution."
+  ]
+}

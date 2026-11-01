@@ -1,0 +1,12 @@
+{
+  "variant": "M3",
+  "mean_ms": "0.07703761000300346",
+  "p95_ms": "0.09971210000685368",
+  "size_KB": "3.76",
+  "accuracy_pct": "100.0",
+  "energy_estimate_mJ": "1.155564150045052",
+  "critical_recall_pct": "100.0",
+  "shifted_stats_accuracy_pct": "100.0",
+  "cpu_pct": "100.0",
+  "model_sha256": "4689b8f4e7b910b14facbf90493c6ea66aeccb58c5ee75f2be86f9450a0f229e"
+}

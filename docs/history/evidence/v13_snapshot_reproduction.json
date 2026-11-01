@@ -1,0 +1,5 @@
+{
+  "fixture_only": true,
+  "baseline_included_virtual_environment": true,
+  "baseline_included_runtime_state": true
+}
