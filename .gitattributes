@@ -1,0 +1,10 @@
+# Keep Linux line endings even when the repo is cloned on Windows.
+# CRLF in .sh files breaks `sh scripts/*.sh` ("set: -e\r: invalid option") and changes file hashes.
+* text=auto eol=lf
+*.png binary
+*.xlsx binary
+*.npy binary
+*.npz binary
+*.tflite binary
+*.keras binary
+*.pdf binary
